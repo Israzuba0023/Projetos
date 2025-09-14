@@ -1,0 +1,150 @@
+# ============================================
+# Universal .gitignore
+# node | python | java | csharp | reactnative 
+# flutter | android | ios | windows | linux 
+# macos | visualstudiocode | intellij
+# ============================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+dist/
+build/
+.next/
+out/
+.nuxt/
+.cache/
+.parcel-cache/
+coverage/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv/
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+.pyre/
+.mypy_cache/
+.dmypy.json
+.pytype/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+*.log
+*.ctxt
+.mtj.tmp/
+*.iml
+.gradle/
+build/
+target/
+
+# C# / .NET
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.log
+*.cache
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+TestResult*/
+*.nuget/
+*.nupkg
+project.lock.json
+artifacts/
+
+# React Native / Flutter / Mobile
+.expo/
+.expo-shared/
+web-build/
+*.apk
+*.aab
+*.ipa
+*.app.dSYM.zip
+*.app.dSYM
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+ios/Pods/
+ios/build/
+*.xcworkspace
+*.xcuserstate
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+DerivedData/
+*.xcuserdatad
+*.hmap
+*.ipa
+*.app
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.nfs*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ / JetBrains
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
