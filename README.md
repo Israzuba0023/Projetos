@@ -30,3 +30,12 @@ Aqui encontrarás exemplos práticos utilizando **Node.js, Python, Java, C#, Rea
 1. Clone este repositório:
    ```bash
    git clone https://github.com/SEU-USUARIO/projetos-fullstack.git
+
+## 🤝 Conexão e Comunidade
+
+Se você tiver dúvidas sobre os projetos ou as tecnologias, sinta-se à vontade para entrar em contato.
+
+* **LinkedIn:** [https://www.linkedin.com/in/israel-cassute/](https://www.linkedin.com/in/israel-cassute/)
+* **Twitter/X:** [https://x.com/Israzuba0023](https://x.com/Israzuba0023)
+* **Instagram:** [https://www.instagram.com/israzuba0023/](https://www.instagram.com/israzuba0023/)
+
