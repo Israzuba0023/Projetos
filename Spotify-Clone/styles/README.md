@@ -4,7 +4,7 @@
 
 Este projeto é um clone fiel (apenas Front-End) da interface de usuário (UI) do **Spotify Web Player/Desktop App**. O objetivo principal foi demonstrar o domínio de técnicas avançadas de layout em CSS e a adição de interatividade básica via JavaScript puro.
 
-Foi um exercício focado em **fidelidade visual**, **responsividade** e organização de código Front-End para criar uma experiência complexa de múltiplos painéis.
+Foi um exercício focado em **fidelidade visual**, **responsividade** e organização de código Front-End para criar uma experiência complexa de múltiplos painéis. 
 
 ---
 
