@@ -1,4 +1,4 @@
-# 🇧🇷/🇦🇴 Portfólio Pessoal de Israel Cassute | Um Guia de Projetos Reais
+# Portfólio Pessoal de Israel Cassute | Um Guia de Projetos Reais
 
 ## 🚀 Objetivo Educacional
 
