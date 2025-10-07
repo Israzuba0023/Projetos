@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}">« Ver Blog</a>
+    </header>
+
+    <div class="container">
+        <h1>Painel de Administração</h1>
+
+        <h2>{% if post_to_edit %}Editar Post #{{ post_to_edit.id }}{% else %}Novo Post{% endif %}</h2>
+        <form method="POST" action="{% if post_to_edit %}{{ url_for('edit_post', post_id=post_to_edit.id) }}{% else %}{{ url_for('create_post') }}{% endif %}" class="post-form">
+
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" value="{% if post_to_edit %}{{ post_to_edit.titulo }}{% endif %}" required>
+
+            <label for="corpo">Corpo do Post:</label>
+            <textarea id="corpo" name="corpo" required>{% if post_to_edit %}{{ post_to_edit.corpo }}{% endif %}</textarea>
+
+            <button type="submit" class="btn">{% if post_to_edit %}Salvar Alterações{% else %}Publicar Post{% endif %}</button>
+
+            {% if post_to_edit %}
+                <a href="{{ url_for('admin') }}" class="btn" style="background-color: #9e9e9e;">Cancelar Edição</a>
+            {% endif %}
+        </form>
+
+        <hr style="margin: 40px 0; border-color: #ddd;">
+
+        <h2>Posts Publicados</h2>
+
+        {% for post in posts %}
+        <div class="post-summary">
+            <h2>{{ post.titulo }}</h2>
+            <p class="post-meta">ID: #{{ post.id }} | Publicado em: {{ post.data_criacao.strftime('%d/%m/%Y') }}</p>
+            <div class="admin-actions" style="margin-top: 10px;">
+                <a href="{{ url_for('post', post_id=post.id) }}">Ver Post</a>
+                <a href="{{ url_for('edit_post', post_id=post.id) }}">Editar</a>
+
+                <form method="POST" action="{{ url_for('delete_post', post_id=post.id) }}" style="display: inline-block;" class="delete-form">
+                    <button type="submit" class="btn">Excluir</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

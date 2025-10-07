@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Tarefas (Full-Stack CRUD)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Minhas Tarefas</h1>
+
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Nova tarefa..." required>
+            <button type="submit" class="btn add-btn">Adicionar</button>
+        </form>
+
+        <ul id="task-list">
+            </ul>
+
+        <p class="status-message" id="status-message">Carregando tarefas...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+</body>
+</html>

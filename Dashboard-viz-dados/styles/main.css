@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #007bff;
+    --background-dark: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-dark);
+    color: var(--text-color);
+}
+
+.dashboard-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container {
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Estilo para Cartões */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* GRID para os Cartões de Resumo */
+.summary-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.summary-card h3 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.summary-card p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* GRID para a Área de Gráficos */
+.charts-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+.chart-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* --- ESTILOS PARA O SPINNER DE CARREGAMENTO --- */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 247, 246, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid var(--primary-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Classe para ocultar o overlay */
+.loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Responsividade básica */
+@media (max-width: 900px) {
+    .charts-area {
+        grid-template-columns: 1fr;
+    }
+}

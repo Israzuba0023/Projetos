@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Preços de Cripto</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h1>Dashboard de Criptomoedas</h1>
+        <p>Análise de dados em tempo real fornecidos pela API CoinGecko.</p>
+    </header>
+
+    <div class="dashboard-container">
+
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="spinner"></div>
+            <p>Carregando dados da API...</p>
+        </div>
+
+        <div class="summary-cards-grid">
+            <div class="card summary-card">
+                <h3>Total de Moedas (Top 10)</h3>
+                <p id="total-moedas">Carregando...</p>
+            </div>
+            <div class="card summary-card">
+                <h3>Capitalização Total (USD)</h3>
+                <p id="cap-total">Carregando...</p>
+            </div>
+        </div>
+
+        <section class="charts-area">
+
+            <div class="card chart-card">
+                <h2>Top 5 Moedas por Preço</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="card chart-card">
+                <h2>Variação Percentual (24h)</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

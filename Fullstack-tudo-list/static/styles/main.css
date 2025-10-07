@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #2e86de;
+    --success-color: #2ecc71;
+    --delete-color: #e74c3c;
+    --bg-color: #f4f7f6;
+    --text-color: #34495e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+#task-form {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.2s;
+}
+
+.add-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+.add-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Lista de Tarefas */
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ecf0f1;
+    transition: background-color 0.2s;
+}
+
+.task-item:hover {
+    background-color: #f8f9fa;
+}
+
+.task-description {
+    flex-grow: 1;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Estado Concluído (Toggle para UPDATE) */
+.task-item.completed .task-description {
+    text-decoration: line-through;
+    color: var(--success-color);
+    font-style: italic;
+}
+
+.delete-btn {
+    background-color: var(--delete-color);
+    color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.status-message {
+    text-align: center;
+    color: #95a5a6;
+    margin-top: 20px;
+}

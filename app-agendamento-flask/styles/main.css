@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #007bff; /* Azul */
+    --success-color: #28a745; /* Verde */
+    --error-color: #dc3545; /* Vermelho */
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* --- Mensagens Flash --- */
+.flash-message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.flash-message.success {
+    background-color: #d4edda;
+    color: var(--success-color);
+    border: 1px solid #c3e6cb;
+}
+.flash-message.error {
+    background-color: #f8d7da;
+    color: var(--error-color);
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Formulário de Agendamento --- */
+.appointment-form {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+.appointment-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.appointment-form input[type="text"],
+.appointment-form input[type="email"],
+.appointment-form input[type="date"],
+.appointment-form input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.appointment-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.appointment-form button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Lista de Consultas --- */
+.appointment-list {
+    margin-top: 30px;
+}
+.appointment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.details p {
+    margin: 5px 0;
+}
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.status.Agendada {
+    background-color: #ffe0b2;
+    color: #ef6c00;
+}
+.status.Cancelada {
+    background-color: #f8d7da;
+    color: var(--error-color);
+}
+.status.Concluída {
+    background-color: #d4edda;
+    color: var(--success-color);
+}
+
+.cancel-form button {
+    background-color: var(--error-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
